@@ -6,11 +6,15 @@ const app: Express = express();
 const PORT: number = 3000;
 const API_URL: string = "https://api.spoonacular.com";
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", async (_, res: Response) => {
-  res.render("index.ejs");
+  const currentYear = new Date().getFullYear();
+  res.render("home.ejs", { year: currentYear });
 });
 
 app.listen(PORT, () => {
