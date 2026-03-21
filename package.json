@@ -13,6 +13,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "ejs": "^4.0.1"
+    "axios": "^1.13.6",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
   }
 }
