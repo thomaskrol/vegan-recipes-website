@@ -2,12 +2,12 @@
 
   <div class="container">
     <h1>Vegan Recipe Search</h1>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search for delicious recipes...">
-      <button id="searchButton">Search</button>
-    </div>
-
-    <div id="results"></div>
+    <form method="POST" action="/search">
+      <div class="search-container">
+        <input type="text" id="searchInput" name="searchInput" placeholder="Search for delicious recipes...">
+        <button id="searchButton" type="submit">Search</button>
+      </div>
+    </form>
   </div>
 
 <%- include("partials/footer.ejs") %>

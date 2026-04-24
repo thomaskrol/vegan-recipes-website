@@ -1,1 +1,32 @@
+<%- include("partials/header.ejs") %>
 
+  <div class="container">
+    <h1>Vegan Recipe Search</h1>
+    <form method="POST" action="/search">
+      <div class="search-container">
+        <input type="text" id="searchInput" name="searchInput" placeholder="Search for delicious recipes...">
+        <button id="searchButton" type="submit">Search</button>
+      </div>
+    </form>
+
+    <div id="results">
+      <% if (!locals.list) { %>
+        <p>Enter a recipe to search...</p>
+      <% } else if (list.length === 0) { %>
+        <p>No recipes found.</p>
+      <% } else { %>
+        <% list.forEach(recipe => { %>
+          <div class="recipe">
+            <h3><%= recipe.title %></h3>
+            <img src="<%= recipe.image %>" alt="<%= recipe.title %>">
+            <p><b>Calories:</b> <%= recipe.calories %></p>
+            <p><b>Carbs:</b> <%= recipe.carbs %></p>
+            <p><b>Protein:</b> <%= recipe.protein %></p>
+            <p><b>Fat:</b> <%= recipe.fat %></p>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+
+<%- include("partials/footer.ejs") %>
