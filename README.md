@@ -80,11 +80,3 @@ vegan-recipes-website/
 ## API Key
 
 This project requires a Spoonacular API key to fetch recipe data. Sign up for a free API key at [Spoonacular Food API](https://spoonacular.com/food-api).
-
-## Contributing
-
-This is a private project. For contributions, please contact the maintainer.
-
-## License
-
-This project is private and not licensed for public use.
