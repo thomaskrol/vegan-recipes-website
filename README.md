@@ -21,41 +21,6 @@ A web application for discovering and exploring vegan recipes using the Spoonacu
 - **Runtime**: Bun
 - **HTTP Client**: Axios
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd vegan-recipes-website
-   ```
-
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-
-3. Set up environment variables:
-   - Create a `.env` file in the root directory
-   - Add your Spoonacular API key:
-     ```
-     API_KEY=your_spoonacular_api_key_here
-     ```
-   - Get an API key from [Spoonacular](https://spoonacular.com/food-api)
-
-## Usage
-
-To run the development server:
-
-```bash
-bun run index.ts
-```
-
-The application will be available at `http://localhost:3000`.
-
-- Visit the home page to search for recipes
-- Enter a search query (e.g., "pasta", "salad") to find vegan recipes
-- View the list of results with nutritional information
-
 ## Project Structure
 
 ```
